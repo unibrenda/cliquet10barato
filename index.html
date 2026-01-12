@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,20 +41,20 @@
             /* COLOQUE O LINK DA SUA IMAGEM DENTRO DOS PARÊNTESES ABAIXO.
                Mantenha as aspas simples. Ex: url('https://site.com/imagem.jpg');
             */
-            background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(37, 38, 43, 1)), 
-            url('https://i.ibb.co/NdtVyxjc/100-1.png');
-            
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(37, 38, 43, 1)),
+                url('https://i.ibb.co/NdtVyxjc/100-1.png');
+
             background-size: cover;
             background-position: center;
-            margin: -30px -30px 20px -30px; 
+            margin: -30px -30px 20px -30px;
             padding: 80px 20px 30px 20px;
             text-align: center;
             border-bottom: 2px solid var(--accent-color);
         }
 
-        h1 { 
-            color: #fff; 
-            text-shadow: 0 2px 10px rgba(0,0,0,1);
+        h1 {
+            color: #fff;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
             margin: 0;
             font-size: 2.2rem;
             text-transform: uppercase;
@@ -61,43 +62,139 @@
         }
 
         .input-group {
-            text-align: center; margin-bottom: 20px; background: #2c2e33; padding: 15px; border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+            background: #2c2e33;
+            padding: 15px;
+            border-radius: 8px;
             border: 1px solid #444;
         }
-        
-        input[type="number"] {
-            background: #141517; border: 1px solid #555; color: #fff; padding: 8px; width: 80px; text-align: center; border-radius: 4px;
-        }
-        /* Estilo para inputs travados (Preço Fixo/Quest) */
-        input[type="number"]:disabled { background: #222; color: #777; border-color: #333; cursor: not-allowed; font-weight: bold; }
 
-        table { width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 30px; }
-        th, td { padding: 10px; text-align: left; border-bottom: 1px solid var(--border-color); vertical-align: middle; }
-        th { color: var(--accent-color); font-weight: 600; background: #2c2e33; position: sticky; top: 0; z-index: 10; }
-        
-        .text-right { text-align: right; }
-        .text-center { text-align: center; }
+        input[type="number"] {
+            background: #141517;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 8px;
+            width: 80px;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* Estilo para inputs travados (Preço Fixo/Quest) */
+        input[type="number"]:disabled {
+            background: #222;
+            color: #777;
+            border-color: #333;
+            cursor: not-allowed;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 30px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        th {
+            color: var(--accent-color);
+            font-weight: 600;
+            background: #2c2e33;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
 
         /* ARVORE */
-        .item-flex { display: flex; align-items: center; gap: 10px; position: relative; }
-        .item-icon { width: 32px; height: 32px; border: 1px solid #555; background: #000; border-radius: 4px; object-fit: cover; }
-        .has-tooltip { cursor: help; border-bottom: 1px dotted #777; }
+        .item-flex {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .item-icon {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #555;
+            background: #000;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .has-tooltip {
+            cursor: help;
+            border-bottom: 1px dotted #777;
+        }
 
         .toggle-btn {
-            background: #3b3d42; color: #fff; border: 1px solid #555; width: 24px; height: 24px; 
-            cursor: pointer; border-radius: 4px; display: flex; align-items: center; justify-content: center; 
-            font-weight: bold; margin-right: 5px; z-index: 2;
+            background: #3b3d42;
+            color: #fff;
+            border: 1px solid #555;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 5px;
+            z-index: 2;
         }
-        .toggle-btn:hover { background: var(--accent-color); color: #000; }
 
-        .child-row { display: none; background-color: var(--sub-row-bg); }
-        .child-row.open { display: table-row; }
-        .tree-indent { padding-left: 45px; position: relative; }
-        .tree-line {
-            position: absolute; left: 21px; top: -20px; height: 140%; width: 15px;
-            border-left: 2px solid #555; border-bottom: 2px solid #555; border-bottom-left-radius: 8px; z-index: 1;
+        .toggle-btn:hover {
+            background: var(--accent-color);
+            color: #000;
         }
-        .child-input { width: 90px; font-size: 0.9em; padding: 5px; }
+
+        .child-row {
+            display: none;
+            background-color: var(--sub-row-bg);
+        }
+
+        .child-row.open {
+            display: table-row;
+        }
+
+        .tree-indent {
+            padding-left: 45px;
+            position: relative;
+        }
+
+        .tree-line {
+            position: absolute;
+            left: 21px;
+            top: -20px;
+            height: 140%;
+            width: 15px;
+            border-left: 2px solid #555;
+            border-bottom: 2px solid #555;
+            border-bottom-left-radius: 8px;
+            z-index: 1;
+        }
+
+        .child-input {
+            width: 90px;
+            font-size: 0.9em;
+            padding: 5px;
+        }
 
         /* GRID INFO */
         .info-grid {
@@ -109,178 +206,248 @@
             border-top: 1px solid #444;
         }
 
-        .info-card { background: #202125; padding: 20px; border-radius: 8px; border: 1px solid #333; }
-        .info-card h3 { color: var(--accent-color); margin-top: 0; border-bottom: 1px solid #444; padding-bottom: 10px; font-size: 1.1rem; }
-        .info-list { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; color: #ccc; }
-        .info-list li { margin-bottom: 12px; line-height: 1.4; }
-        .info-list strong { color: #fff; display: block; margin-bottom: 2px; }
-        .highlight { color: #8ebf42; font-size: 0.85em; }
+        .info-card {
+            background: #202125;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
 
-        @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } }
+        .info-card h3 {
+            color: var(--accent-color);
+            margin-top: 0;
+            border-bottom: 1px solid #444;
+            padding-bottom: 10px;
+            font-size: 1.1rem;
+        }
 
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .info-list li {
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .info-list strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .highlight {
+            color: #8ebf42;
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="header-banner">
-        <h1>Calculadora T10 - Incensário Lua Minguante; Opção mais barata. </h1>
-    </div>
+    <div class="container">
+        <div class="header-banner">
+            <h1>Calculadora T10 - Incensário Lua Minguante; Opção mais barata. </h1>
+        </div>
 
-    <div class="input-group">
-        <label>QUANTOS CLIQUES? </label>
-        <input type="number" id="attempts" value="1" min="1" oninput="calculate()">
-    </div>
+        <div class="input-group">
+            <label>QUANTOS CLIQUES? </label>
+            <input type="number" id="attempts" value="1" min="1" oninput="calculate()">
+        </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th style="width: 35%;">Item / Receita</th>
-                <th class="text-center" style="width: 10%;">Qtd Base</th>
-                <th class="text-right">MEU ESTOQUE</th>
-                <th class="text-right">FALTAM?</th>
-                <th class="text-right">Preço Unit.</th>
-                <th class="text-right">Custo Total</th>
-            </tr>
-        </thead>
-        <tbody id="table-body">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 35%;">Item / Receita</th>
+                    <th class="text-center" style="width: 10%;">Qtd Base</th>
+                    <th class="text-right">MEU ESTOQUE</th>
+                    <th class="text-right">FALTAM?</th>
+                    <th class="text-right">Preço Unit.</th>
+                    <th class="text-right">Custo Total</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
             </tbody>
-    </table>
+        </table>
 
-    <div style="text-align: right; font-size: 1.3rem; margin-bottom: 20px;">
-        Custo Final Estimado: <strong style="color: var(--accent-color)" id="grand-total">0</strong> Silver
-    </div>
-
-    <div class="info-grid">
-        <div class="info-card">
-            <h3>🌿 Materiais de Treinamento</h3>
-            <ul class="info-list">
-                <li>
-                    <strong>Flor De Errante</strong>
-                    Obtida na <span class="highlight">Entrega Imperial de Cavalos</span>.
-                    <br> Obtido apenas com a entrega de cavalos lv 15+.
-                </li>
-                <li>
-                    <strong>Raiz de Samambaia</strong>
-                    Obtida em Missões Diárias e Semanais no <span class="highlight">Rancho Cauda de Pedra com NPC Wapra e NPC Liana nas cidades principais.</span> 
-                </li>
-                <li>
-                    <strong>Pluma do devaneio</strong>
-                    Obtida ao derrotar Rachadura da Escuridão, Missão Semanal (Wapra/Liana) ou comprada no Mercado.
-                </li>
-            </ul>
+        <div style="text-align: right; font-size: 1.3rem; margin-bottom: 20px;">
+            Custo Final Estimado: <strong style="color: var(--accent-color)" id="grand-total">0</strong> Silver
         </div>
 
-        <div class="info-card">
-            <h3>🌙 Materiais Lua Minguante</h3>
-            <ul class="info-list">
-                <li>
-                    <strong>Molde de Incensário da Lua Minguante</strong>
-                    Vendido exclusivamente pelo <span class="highlight">Gerente da Lua Minguante</span>.
-                    <br>Custo fixo: 20.000.000 Silver.
-                </li>
-                <li>
-                    <strong>Pó de Devaneio </strong>
-                    Fabricado conforme receita na tabela acima.
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>🌿 Materiais de Treinamento</h3>
+                <ul class="info-list">
                     <li>
-                        <li>
-                            <li>
+                        <strong>Flor De Errante</strong>
+                        Obtida na <span class="highlight">Entrega Imperial de Cavalos</span>.
+                        <br> Obtido apenas com a entrega de cavalos lv 15+.
+                    </li>
+                    <li>
+                        <strong>Raiz de Samambaia</strong>
+                        Obtida em Missões Diárias e Semanais no <span class="highlight">Rancho Cauda de Pedra com NPC
+                            Wapra e NPC Liana nas cidades principais.</span>
+                    </li>
+                    <li>
+                        <strong>Pluma do devaneio</strong>
+                        Obtida ao derrotar Rachadura da Escuridão, Missão Semanal (Wapra/Liana) ou comprada no Mercado.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>🌙 Materiais Lua Minguante</h3>
+                <ul class="info-list">
+                    <li>
+                        <strong>Molde de Incensário da Lua Minguante</strong>
+                        Vendido exclusivamente pelo <span class="highlight">Gerente da Lua Minguante</span>.
+                        <br>Custo fixo: 20.000.000 Silver.
+                    </li>
+                    <li>
+                        <strong>Pó de Devaneio </strong>
+                        Fabricado conforme receita na tabela acima.
+                    <li>
+                    <li>
+                    <li>
 
 
 
-                    <strong><center>SITE FEITO POR SAPODESU</center></strong>
-                    <span class="highlight">Discord: @sapodesu.</span> 
-                
-</li></li></li>
+                        <strong>
+                            <center>SITE FEITO POR SAPODESU</center>
+                        </strong>
+                        <span class="highlight">Discord: @sapodesu.</span>
+
+                    </li>
+                    </li>
+                    </li>
 
 
 
-                </li>
-            </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    const items = [
-        { 
-            id: 'mold', name: 'Incensário da Lua Minguante', base: 1, price: 0, 
-            img: 'https://bdocodex.com/items/new_icon/03_etc/00757007.webp',
-            recipe: [
-                { id: 'mold_p1', name: 'Essência de Platina Pura', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004259.webp' },
-                { id: 'mold_p2', name: 'Essência de Estanho Puro', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004062.webp' },
-                { id: 'mold_p3', name: 'Essência de Cobre Puro', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004059.webp' },
-                { id: 'mold_p5', name: 'Opala Lunar', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004266.webp' },
-                {
-                    id: 'mold_p4', 
-                    name: 'Molde de Incensário da Lua Minguante', 
-                    qtd: 1, 
-                    price: 20000000, // 20kk Fixo
-                    locked: true,    // Travado
-                    desc: 'Vendido no Gerente da Lua Minguante (20kk Silver)',
-                    img: 'https://bdocodex.com/items/new_icon/03_etc/00757006.webp' 
-                
-                }
-            ]
-        },
-        { 
-            id: 'feather', name: 'Pluma do devaneio', base: 10, price: 0,
-            img: 'https://bdocodex.com/items/new_icon/03_etc/00757010.webp'
-        },
-        { 
-            id: 'powder', name: 'Pó de Devaneio', base: 10, price: 0, 
-            img: 'https://bdocodex.com/items/new_icon/03_etc/00757005.webp',
-            recipe: [
-                { 
-                    id: 'pow_p1', 
-                    name: 'Flor de Errante', // Tradução Oficial
-                    qtd: 100, 
-                    price: 0, 
-                    locked: true,
-                    desc: 'Obtido via Entrega Imperial de Cavalos.',
-                    img: 'https://bdocodex.com/items/new_icon/03_etc/00757003.webp' 
-                },
-                { 
-                    id: 'pow_p2', 
-                    name: 'Raiz de Samambaia', // Tradução Oficial
-                    qtd: 100, 
-                    price: 0,
-                    locked: true,
-                    desc: 'Obtido via Diárias/Semanais.',
-                    img: 'https://bdocodex.com/items/new_icon/03_etc/00757004.webp' 
-                },
-                { id: 'pow_p3', name: 'Pó de Pedra Negra', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004901.webp' },
-                { id: 'pow_p4', name: 'Fruto da Natureza', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00005205.webp' },
-                { id: 'pow_p5', name: 'Erva Eterna', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00005406.webp' },
+    <script>
+        const API_CONFIG = {
+            baseUrl: 'https://api.arsha.io/v2',
+            region: 'sa',
+            lang: 'pt',
+            cacheTimeout: 30 * 60 * 1000 // 30 min
+        };
 
-            ]
-        },
-        { 
-            id: 'horn', name: 'Chifre de Fogo', base: 10, price: 0,
-            img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00006185.webp'
-        },
-        { 
-            id: 'shard', name: 'Pó de Chama', base: 10, price: 0,
-            img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004802.webp'
+        const items = [
+            {
+                id: 'mold', name: 'Incensário da Lua Minguante', base: 1, price: 0,
+                img: 'https://bdocodex.com/items/new_icon/03_etc/00757007.webp',
+                recipe: [
+                    { id: 'mold_p1', apiId: 4259, name: 'Essência de Platina Pura', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004259.webp' },
+                    { id: 'mold_p2', apiId: 4062, name: 'Essência de Estanho Puro', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004062.webp' },
+                    { id: 'mold_p3', apiId: 4059, name: 'Essência de Cobre Puro', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004059.webp' },
+                    { id: 'mold_p5', apiId: 4266, name: 'Opala Lunar', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004266.webp' },
+                    {
+                        id: 'mold_p4',
+                        name: 'Molde de Incensário da Lua Minguante',
+                        qtd: 1,
+                        price: 20000000, // 20kk Fixo
+                        locked: true,    // Travado
+                        desc: 'Vendido no Gerente da Lua Minguante (20kk Silver)',
+                        img: 'https://bdocodex.com/items/new_icon/03_etc/00757006.webp'
+
+                    }
+                ]
+            },
+            {
+                id: 'feather', apiId: 757010, name: 'Pluma do devaneio', base: 10, price: 0,
+                img: 'https://bdocodex.com/items/new_icon/03_etc/00757010.webp'
+            },
+            {
+                id: 'powder', name: 'Pó de Devaneio', base: 10, price: 0,
+                img: 'https://bdocodex.com/items/new_icon/03_etc/00757005.webp',
+                recipe: [
+                    {
+                        id: 'pow_p1',
+                        name: 'Flor de Errante', // Tradução Oficial
+                        qtd: 100,
+                        price: 0,
+                        locked: true,
+                        desc: 'Obtido via Entrega Imperial de Cavalos.',
+                        img: 'https://bdocodex.com/items/new_icon/03_etc/00757003.webp'
+                    },
+                    {
+                        id: 'pow_p2',
+                        name: 'Raiz de Samambaia', // Tradução Oficial
+                        qtd: 100,
+                        price: 0,
+                        locked: true,
+                        desc: 'Obtido via Diárias/Semanais.',
+                        img: 'https://bdocodex.com/items/new_icon/03_etc/00757004.webp'
+                    },
+                    { id: 'pow_p3', apiId: 4901, name: 'Pó de Pedra Negra', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004901.webp' },
+                    { id: 'pow_p4', apiId: 5205, name: 'Fruto da Natureza', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00005205.webp' },
+                    { id: 'pow_p5', apiId: 5406, name: 'Erva Eterna', qtd: 100, price: 0, img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00005406.webp' },
+
+                ]
+            },
+            {
+                id: 'horn', apiId: 6185, name: 'Chifre de Fogo', base: 10, price: 0,
+                img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00006185.webp'
+            },
+            {
+                id: 'shard', apiId: 4802, name: 'Pó de Chama', base: 10, price: 0,
+                img: 'https://bdocodex.com/items/new_icon/03_etc/07_productmaterial/00004802.webp'
+            }
+        ];
+
+        function init() {
+            // Inicializar botões de API
+            const inputGroup = document.querySelector('.input-group');
+            const apiControls = document.createElement('div');
+            apiControls.style.marginTop = '15px';
+            apiControls.innerHTML = `
+            <button id="update-prices-btn" onclick="updateAllPrices()" style="background: #10b981; border: 1px solid #059669; color: white; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                🔄 Atualizar Preços (SA)
+            </button>
+            <div id="cache-info" style="font-size: 0.85em; color: #888; margin-top: 5px;"></div>
+        `;
+            inputGroup.appendChild(apiControls);
+
+            // Renderizar tabela
+            renderOriginalTable();
+
+            // Verificar cache e atualizar info
+            updateCacheInfo();
+            setInterval(updateCacheInfo, 60000);
         }
-    ];
 
-    function init() {
-        const tbody = document.getElementById('table-body');
-        
-        items.forEach((item, index) => {
-            const tr = document.createElement('tr');
-            tr.setAttribute('data-index', index);
-            
-            let toggleBtn = item.recipe 
-                ? `<div class="toggle-btn" onclick="toggleGroup(${index})">+</div>` 
-                : `<div style="width:29px"></div>`;
+        function renderOriginalTable() {
+            const tbody = document.getElementById('table-body');
+            tbody.innerHTML = ''; // Limpar para re-renderizar se necessário
 
-            let priceInput = item.recipe
-                ? `<span style="font-size:0.8em; color:#888;">(Soma)</span>`
-                : `<input type="number" id="price-${index}" value="${item.price}" oninput="calculate()">`;
+            items.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.setAttribute('data-index', index);
 
-            tr.innerHTML = `
+                let toggleBtn = item.recipe
+                    ? `<div class="toggle-btn" onclick="toggleGroup(${index})">+</div>`
+                    : `<div style="width:29px"></div>`;
+
+                let priceInput = item.recipe
+                    ? `<span style="font-size:0.8em; color:#888;">(Soma)</span>`
+                    : `<input type="number" id="price-${index}" value="${item.price}" oninput="calculate()">`;
+
+                tr.innerHTML = `
                 <td>
                     <div class="item-flex">
                         ${toggleBtn}
@@ -294,26 +461,27 @@
                 <td class="text-right input-cell">${priceInput}</td>
                 <td class="text-right"><strong id="total-${index}">0</strong></td>
             `;
-            tbody.appendChild(tr);
+                tbody.appendChild(tr);
 
-            if (item.recipe) {
-                item.recipe.forEach((subItem, subIndex) => {
-                    const subTr = document.createElement('tr');
-                    subTr.className = `child-row group-${index}`;
-                    
-                    let priceInputHtml;
-                    let tooltipAttr = "";
-                    let tooltipClass = "";
+                if (item.recipe) {
+                    item.recipe.forEach((subItem, subIndex) => {
+                        const subTr = document.createElement('tr');
+                        subTr.className = `child-row group-${index}`;
 
-                    if (subItem.locked) {
-                        priceInputHtml = `<input type="number" class="child-input" value="${subItem.price}" disabled>`;
-                        tooltipAttr = `title="${subItem.desc}"`;
-                        tooltipClass = "has-tooltip";
-                    } else {
-                        priceInputHtml = `<input type="number" class="child-input" id="price-${index}-${subIndex}" value="${subItem.price}" oninput="calculate()">`;
-                    }
+                        let priceInputHtml;
+                        let tooltipAttr = "";
+                        let tooltipClass = "";
 
-                    subTr.innerHTML = `
+                        if (subItem.locked) {
+                            priceInputHtml = `<input type="number" class="child-input" value="${subItem.price}" disabled>`;
+                            tooltipAttr = `title="${subItem.desc}"`;
+                            tooltipClass = "has-tooltip";
+                        } else {
+                            // ID composto para API update: price-{parentIndex}-{subIndex}
+                            priceInputHtml = `<input type="number" class="child-input" id="price-${index}-${subIndex}" value="${subItem.price}" oninput="calculate()">`;
+                        }
+
+                        subTr.innerHTML = `
                         <td>
                             <div class="tree-indent">
                                 <div class="tree-line"></div>
@@ -331,66 +499,200 @@
                         <td class="text-right">${priceInputHtml}</td>
                         <td class="text-right"><span id="total-${index}-${subIndex}" style="color:#aaa">0</span></td>
                     `;
-                    tbody.appendChild(subTr);
-                });
+                        tbody.appendChild(subTr);
+                    });
+                }
+            });
+            calculate();
+        }
+
+        function toggleGroup(index) {
+            const rows = document.querySelectorAll(`.group-${index}`);
+            rows.forEach(row => row.classList.toggle('open'));
+        }
+
+        function calculate() {
+            const attempts = parseInt(document.getElementById('attempts').value) || 0;
+            let grandTotal = 0;
+
+            items.forEach((item, index) => {
+                const stockParent = parseInt(document.getElementById(`stock-${index}`).value) || 0;
+                const neededParent = item.base * attempts;
+                const missingParent = Math.max(0, neededParent - stockParent);
+
+                const missingEl = document.getElementById(`missing-${index}`);
+                if (missingEl) {
+                    missingEl.innerText = missingParent;
+                    missingEl.style.color = missingParent > 0 ? 'var(--danger-color)' : 'var(--success-color)';
+                }
+
+                let costParent = 0;
+
+                if (item.recipe) {
+                    item.recipe.forEach((subItem, subIndex) => {
+                        const neededSub = missingParent * subItem.qtd;
+                        const stockSub = parseInt(document.getElementById(`stock-${index}-${subIndex}`).value) || 0;
+                        const missingSub = Math.max(0, neededSub - stockSub);
+
+                        let priceSub = subItem.price;
+                        if (!subItem.locked) {
+                            priceSub = parseInt(document.getElementById(`price-${index}-${subIndex}`).value) || 0;
+                        }
+
+                        // Atualizar objeto item.recipe[subIndex].price para persistência (se fosse impl.)
+                        subItem.price = priceSub;
+
+                        const costSub = missingSub * priceSub;
+
+                        const missingSubEl = document.getElementById(`missing-${index}-${subIndex}`);
+                        if (missingSubEl) {
+                            missingSubEl.innerText = missingSub;
+                            missingSubEl.style.color = missingSub > 0 ? '#ff6b6b' : '#69db7c';
+                        }
+                        const totalSubEl = document.getElementById(`total-${index}-${subIndex}`);
+                        if (totalSubEl) totalSubEl.innerText = costSub.toLocaleString('pt-BR');
+
+                        costParent += costSub;
+                    });
+                } else {
+                    const priceParentInput = document.getElementById(`price-${index}`);
+                    let priceParent = 0;
+                    if (priceParentInput) priceParent = parseInt(priceParentInput.value) || 0;
+
+                    // Atualizar objeto item.price
+                    item.price = priceParent;
+
+                    costParent = missingParent * priceParent;
+                }
+
+                const totalEl = document.getElementById(`total-${index}`);
+                if (totalEl) totalEl.innerText = costParent.toLocaleString('pt-BR');
+                grandTotal += costParent;
+            });
+
+            const grandTotalEl = document.getElementById('grand-total');
+            if (grandTotalEl) grandTotalEl.innerText = grandTotal.toLocaleString('pt-BR');
+        }
+
+        // --- API & CACHE LOGIC ---
+
+        function getCacheAge() {
+            const cache = localStorage.getItem('price_cache_index');
+            if (!cache) return null;
+
+            const parsed = JSON.parse(cache);
+            const ageMs = Date.now() - parsed.timestamp;
+            return Math.floor(ageMs / 60000); // minutos
+        }
+
+        function updateCacheInfo() {
+            const cacheAge = getCacheAge();
+            const infoEl = document.getElementById('cache-info');
+
+            if (cacheAge === null) {
+                infoEl.textContent = 'Nunca atualizado';
+            } else if (cacheAge < 30) {
+                infoEl.textContent = `Atualizado há ${cacheAge} min`;
+                infoEl.style.color = '#888';
+            } else {
+                infoEl.textContent = `⚠️ Preços antigos (${cacheAge} min)`;
+                infoEl.style.color = '#eebb00';
             }
-        });
-        calculate();
-    }
+        }
 
-    function toggleGroup(index) {
-        const rows = document.querySelectorAll(`.group-${index}`);
-        rows.forEach(row => row.classList.toggle('open'));
-    }
+        async function fetchPricesBulk(ids) {
+            if (!ids || ids.length === 0) return {};
 
-    function calculate() {
-        const attempts = parseInt(document.getElementById('attempts').value) || 0;
-        let grandTotal = 0;
+            const idsStr = ids.join(',');
+            const url = `${API_CONFIG.baseUrl}/${API_CONFIG.region}/item?id=${idsStr}&lang=${API_CONFIG.lang}`;
 
-        items.forEach((item, index) => {
-            const stockParent = parseInt(document.getElementById(`stock-${index}`).value) || 0;
-            const neededParent = item.base * attempts;
-            const missingParent = Math.max(0, neededParent - stockParent);
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await response.json();
+                const priceMap = {};
+                if (Array.isArray(data)) {
+                    data.forEach(item => {
+                        if (item.id && item.basePrice) {
+                            priceMap[item.id] = item.basePrice;
+                        }
+                    });
+                }
+                return priceMap;
+            } catch (error) {
+                console.error('API Error:', error);
+                return null;
+            }
+        }
 
-            const missingEl = document.getElementById(`missing-${index}`);
-            missingEl.innerText = missingParent;
-            missingEl.style.color = missingParent > 0 ? 'var(--danger-color)' : 'var(--success-color)';
+        async function updateAllPrices() {
+            const cacheAge = getCacheAge();
+            if (cacheAge !== null && cacheAge < 30) {
+                if (!confirm(`Cache recente (${cacheAge} min). Atualizar mesmo assim?`)) return;
+            }
 
-            let costParent = 0;
+            const btn = document.getElementById('update-prices-btn');
+            btn.disabled = true;
+            btn.textContent = '⏳ ...';
 
-            if (item.recipe) {
-                item.recipe.forEach((subItem, subIndex) => {
-                    const neededSub = missingParent * subItem.qtd;
-                    const stockSub = parseInt(document.getElementById(`stock-${index}-${subIndex}`).value) || 0;
-                    const missingSub = Math.max(0, neededSub - stockSub);
-                    
-                    let priceSub = subItem.price;
-                    if (!subItem.locked) {
-                        priceSub = parseInt(document.getElementById(`price-${index}-${subIndex}`).value) || 0;
+            // Coletar IDs
+            let idsToFetch = [];
+            items.forEach(item => {
+                if (item.apiId) idsToFetch.push(item.apiId);
+                if (item.recipe) {
+                    item.recipe.forEach(sub => {
+                        if (sub.apiId) idsToFetch.push(sub.apiId);
+                    });
+                }
+            });
+
+            const prices = await fetchPricesBulk(idsToFetch);
+
+            if (prices) {
+                let updatedCount = 0;
+                // Atualizar valores nos objetos e DOM
+                items.forEach((item, index) => {
+                    // Item Principal
+                    if (item.apiId && prices[item.apiId]) {
+                        item.price = prices[item.apiId];
+                        const input = document.getElementById(`price-${index}`);
+                        if (input) input.value = item.price;
+                        updatedCount++;
                     }
 
-                    const costSub = missingSub * priceSub;
-
-                    document.getElementById(`missing-${index}-${subIndex}`).innerText = missingSub;
-                    document.getElementById(`missing-${index}-${subIndex}`).style.color = missingSub > 0 ? '#ff6b6b' : '#69db7c';
-                    document.getElementById(`total-${index}-${subIndex}`).innerText = costSub.toLocaleString('pt-BR');
-
-                    costParent += costSub;
+                    // Receita
+                    if (item.recipe) {
+                        item.recipe.forEach((sub, subIndex) => {
+                            if (sub.apiId && prices[sub.apiId]) {
+                                sub.price = prices[sub.apiId];
+                                const input = document.getElementById(`price-${index}-${subIndex}`);
+                                if (input && !sub.locked) input.value = sub.price;
+                                updatedCount++;
+                            }
+                        });
+                    }
                 });
+
+                // Salvar cache
+                localStorage.setItem('price_cache_index', JSON.stringify({
+                    timestamp: Date.now(),
+                    data: prices
+                }));
+
+                calculate(); // Recalcular tudo
+                updateCacheInfo();
+                alert(`✅ ${updatedCount} preços atualizados!`);
             } else {
-                const priceParent = parseInt(document.getElementById(`price-${index}`).value) || 0;
-                costParent = missingParent * priceParent;
+                alert('❌ Erro na API.');
             }
 
-            document.getElementById(`total-${index}`).innerText = costParent.toLocaleString('pt-BR');
-            grandTotal += costParent;
-        });
+            btn.disabled = false;
+            btn.textContent = '🔄 Atualizar Preços (SA)';
+        }
 
-        document.getElementById('grand-total').innerText = grandTotal.toLocaleString('pt-BR');
-    }
-
-    window.onload = init;
-</script>
+        window.onload = init;
+    </script>
 
 </body>
+
 </html>
